@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Presenters;
 
-use App\Models\ShopLoader;
+use App\Models\ProductLoader;
 use Nette;
 
 
@@ -13,7 +13,7 @@ final class HomePresenter extends Nette\Application\UI\Presenter
     private $shopLoader;
     public function __construct()
     {
-        $this->shopLoader = new ShopLoader();
+        $this->shopLoader = new ProductLoader();
     }
     public function renderDefault(): void
     {

@@ -1,5 +1,6 @@
 <?php
 namespace App\Models;
+
 use Nette;
 
 
@@ -7,6 +8,7 @@ use Nette;
 final class ShopLoader
 {
     private $AllProducts;
+    
     public function __construct()
     {
         $this->AllProducts = $this->load_all();
@@ -58,4 +60,6 @@ final class ShopLoader
         $return['shops'] = $products;
         return $return;
     }
+
+    
 }
