@@ -27,43 +27,73 @@ final class DatabaseConnect
         $this->database = new Nette\Database\Connection($host, $username, $password);
     }
     public function getAll(){
-        $result = $this->database->query("SELECT * FROM `products`");
-        return $result->fetchAll();
+        $result = $this->database->query("SELECT product_ean, MIN(price) AS cheapest_price FROM productprices GROUP BY product_ean;");
+        $products = $result->fetchAll();
+        $return = [];
+        
+        foreach($products as $product){
+            $price = $product['cheapest_price'];
+            $ean = $product['product_ean'];
+            $temp = $this->database->query("SELECT p.name , p.description , p.url , p.ean ,s.name AS shop , pp.price  FROM  productprices as pp JOIN products as p ON p.ean = pp.product_ean JOIN stores as s ON s.id = pp.store_id  WHERE pp.product_ean = '$ean' AND  ABS(pp.price- $price ) < 0.00001 LIMIT 1")->fetchAll();
+            $return[] = $temp[0];
+        }
+        
+        return $return;
     }
 
     public function addProduct($data){
-        
-        $price = $data['price'];
+    
         $name = $data['name'];
         $description = $data['description'];
         $url = $data['url'];
         $ean = $data['ean'];
-        $shopname = $data['shop'];
-        $query = "INSERT INTO `products` (`id`, `price`, `name`, `description`, `url`, `ean`, `shop_name`) VALUES (NULL, ?, ?, ?, ?, ?, ?)";
-        $this->database->query($query, $price, $name, $description, $url, $ean, $shopname);
+        $query = "INSERT INTO `products` (`id`, `name`, `description`, `url`, `ean`) VALUES (NULL,?, ?, ?, ?)";
+        $this->database->query($query, $name, $description, $url, $ean);
         
         
     }
-    public function getProduct($ean , $shopname){
-        $result = $this->database->query("SELECT * FROM `products` WHERE `products`.`ean` = '$ean' AND `products`.`shop_name` = '$shopname'");
+    public function getProduct($ean){
+        $result = $this->database->query("SELECT * FROM `products` WHERE `products`.`ean` = '$ean' ");
         return $result->fetch();
     }
 
-    public function getProductFromAllShops($ean){
-        $result = $this->database->query("SELECT * FROM `products` WHERE `products`.`ean` = '$ean'");
+    public function getPrices($ean){
+        $result = $this->database->query("SELECT pp.price, s.name FROM `productprices` AS pp JOIN stores as s ON s.id = pp.store_id WHERE `product_ean` = '$ean';");
         return $result->fetchAll();
     }
 
-    public function updateProduct($ean ,$shopname ,$data){
-        $price = $data['price'];
+    public function getPrice($ean,$shopname){
+        $result = $this->database->query("SELECT pp.price FROM productprices AS pp JOIN stores AS s ON pp.store_id = s.id WHERE pp.product_ean = '$ean' AND s.name = '$shopname'; ");
+        return $result->fetch();
+    }
+
+    public function insertPrice($ean,$shopname,$price){
+        $storeid= $this->database->query("SELECT id FROM `stores` WHERE name = '$shopname';")->fetch()['id'];
+        $this->database->query("INSERT INTO `productprices` (`id`, `product_ean`, `store_id`, `price`, `old_price`) VALUES (NULL,?, ?, ?, ?)",$ean,$storeid,$price,$price);
+    }
+
+    public function updatePrice($ean, $shopname, $price, $oldprice){
+        $storeid= $this->database->query("SELECT id FROM `stores` WHERE name = '$shopname';")->fetch()['id'];
+        $this->database->query("UPDATE `productprices` SET `price` = ?, `old_price` = ? WHERE `product_ean` = ? AND `store_id` = ?", $price, $oldprice, $ean, $storeid);
+
+    }
+
+
+    public function updateProduct($ean ,$data){
+        
         $name = $data['name'];
         $description = $data['description'];
         $url = $data['url'];
         $ean = $data['ean'];
-        $shopname = $data['shop'];
-        $query = "UPDATE `products` SET `price` = ?, `name` = ?, `description` = ?, `url` = ? WHERE `ean` = ? AND `shop_name` = ?";
-        $this->database->query($query, $price, $name, $description, $url, $ean, $shopname);
+        
+        $query = "UPDATE `products` SET `name` = ?, `description` = ?, `url` = ? WHERE `ean` = ?";
+        $this->database->query($query, $name, $description, $url, $ean);
     
+    }
+
+    public function getStoreNames(){
+        $result = $this->database->query("SELECT `name` FROM `stores`");
+        return $result->fetchAll();
     }
 
 }

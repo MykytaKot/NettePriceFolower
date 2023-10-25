@@ -2,22 +2,27 @@
 namespace App\Models;
 
 use Nette;
-
+use App\Models\DatabaseConnect;
 
 
 final class ShopLoader
 {
     private $AllProducts;
+    private $dbConnection;
     
     public function __construct()
     {
+        $this->dbConnection = new  DatabaseConnect();
         $this->AllProducts = $this->load_all();
+
     }
 
     private function load_all(){
-        $shops = ['Allo','Citrus','Rozetka'];
+        $shops = $this->dbConnection->getStoreNames();
+      
         $shopsData = [];
         foreach ($shops as $shop) {
+            $shop = $shop['name'];
             $shopModel = 'App\Models\Shops\\'.$shop.'Model';
             $shopModel = new $shopModel();
             $shoptemp = $shopModel->getAll();

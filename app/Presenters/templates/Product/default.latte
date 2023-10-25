@@ -17,11 +17,11 @@
   <div class="container">
 		<h2>Prices</h2>
 		<ul class="list-group mb-3">
-    {foreach $product['shops'] as $shop}
+    {foreach $shops as $shop}
 			<li class="list-group-item d-flex justify-content-between lh-sm">
 			  <div>
 				<h6 class="my-0">{$shop['name']}</h6>
-				<small class="text-body-secondary">{$shop['shop_name']}</small>
+				
 			  </div>
 			  <span class="text-body-secondary">{$shop['price']} EUR</span>
 			</li>

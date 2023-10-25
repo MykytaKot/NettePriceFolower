@@ -18,6 +18,8 @@ final class ProductPresenter extends Nette\Application\UI\Presenter
     public function renderDefault($ean): void
     {
         $data = $this->shopLoader->get_product($ean);
-        $this->template->product = $data;
+        
+        $this->template->product = $data['product'];
+        $this->template->shops = $data['shops'];
     }
 }
