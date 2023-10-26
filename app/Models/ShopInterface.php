@@ -6,4 +6,7 @@ interface ShopInterface
 {
     public function LoadProducts();
     public function getAll();
+    
+    
+
 }

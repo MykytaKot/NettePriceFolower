@@ -1,3 +1,5 @@
+
+
 {block content}
 <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
     <div class="col-md-6 p-lg-5 mx-auto my-5">
@@ -14,7 +16,12 @@
     <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
   <div>
+ 
   <div class="container">
+    <div class="row">
+    <div class="col-6">
+
+   
 		<h2>Prices</h2>
 		<ul class="list-group mb-3">
     {foreach $shops as $shop}
@@ -28,4 +35,37 @@
 			
 			  {/foreach}
 		  </ul>
+    </div>
+    <div class="col-6">
+      <form n:name=registrationForm>
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Follow the price change</h4>
+        </div>
+        <div class="card-body">
+        
+          <ul class="list-unstyled  mb-4">
+            <li>Your email</li> 
+            <li><input type="email" class="form-control" id="email" n:name=email placeholder="you@example.com" required ></li>
+            <li class="mt-2">How big must be a price drop : <small id="precantage" class="h6">25</small> %</li>
+            
+            <li>
+              <input type="range" class="form-range" n:name=change  min="0" max="100" value="10" id="customRange" ></li>
+          </ul>
+          <input type="text" n:name=ean value="{$product['ean']}" hidden>
+          <script>
+            var slider = document.getElementById("customRange");
+            var output = document.getElementById("precantage");
+            output.innerHTML = slider.value;
+            
+            slider.oninput = function() {
+              output.innerHTML = this.value;
+            }
+          </script>
+          <input n:name=send class="w-100 btn btn-lg btn-primary">
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
   </div>

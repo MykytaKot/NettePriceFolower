@@ -7,6 +7,7 @@ use Nette;
 use Nette\Database\Explorer;
 use Nette\Database\Structure;
 
+
 final class DatabaseConnect
 {
     
@@ -96,5 +97,42 @@ final class DatabaseConnect
         return $result->fetchAll();
     }
 
+    public function addFollower($email,$change,$ean){
+        $insertQuery = "
+        INSERT INTO pricechange (product_ean, user_id, percentage)
+        SELECT 
+            ?,
+            u.id,
+            ?
+        FROM users u
+        WHERE u.email = ?";
+        $this->database->query($insertQuery, $ean, $change, $email);
+    }
+
+    public function getFollower($email,$ean){
+        $result = $this->database->query("SELECT * FROM `pricechange` WHERE `pricechange`.`product_ean` = '$ean' AND `pricechange`.`user_id` = (SELECT `users`.`id` FROM `users` WHERE `users`.`email` = '$email' )");
+        return $result->fetch();
+    }
+
+    public function updateFollower($email,$change,$ean){
+        $updateQuery = "
+        UPDATE pricechange
+        SET percentage = ?
+        WHERE user_id = (
+            SELECT id
+            FROM users
+            WHERE email = ?
+        ) AND product_ean = ?";
+        $this->database->query($updateQuery, $change, $email, $ean);
+    }
+    
+    public function addUser($email){
+        $this->database->query("INSERT INTO `users` (`id`, `email`) VALUES (NULL, ?)",$email);
+    }
+
+    public function getUser($email){
+        $result = $this->database->query("SELECT * FROM `users` WHERE `users`.`email` = '$email' ");
+        return $result->fetch();
+    }
 }
 
