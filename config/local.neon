@@ -1,0 +1,16 @@
+parameters:
+
+
+database:
+	dsn: 'host'
+	user: urname
+	password: pass
+
+
+mail:
+	host: 'sandbox.smtp.mailtrap.io'
+	port: 2525
+	username: 'username'
+	password: 'pass'
+	clientHost: 'PriceFollower@gmail.com'
+	
