@@ -14,13 +14,20 @@ final class ProductLoader
         $this->database = new DatabaseConnect();
     }
 
-
-    public function get_all(){
-       
-        return $this->database->getAll();
+    public function get_pagination_data(){
+            $count = $this->database->getProductCount()['number'];
+            $pages = ceil($count/30);
+            $data['pages'] = $pages;
+            $data['count'] = $count;
+            return $data;
     }
 
-    public function get_all_lowest_price(){
+    public function get_all_lowest_price($page){
+       
+        return $this->database->getAll($page*30);
+    }
+
+    public function get_all(){
        
         return $this->database->getAll();
     }

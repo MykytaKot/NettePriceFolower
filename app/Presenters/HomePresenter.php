@@ -18,6 +18,15 @@ final class HomePresenter extends Nette\Application\UI\Presenter
     public function renderDefault(): void
     {
       
-        $this->template->products = $this->shopLoader->get_all_lowest_price();
+        $this->template->products = $this->shopLoader->get_all_lowest_price(1);
+        $this->template->pagination = $this->shopLoader->get_pagination_data();
+        $this->template->currentpage = 1;
+    }
+    public function renderPaged($page): void
+    {
+      
+        $this->template->products = $this->shopLoader->get_all_lowest_price($page);
+        $this->template->pagination = $this->shopLoader->get_pagination_data();
+        $this->template->currentpage = $page;
     }
 }

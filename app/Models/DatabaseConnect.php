@@ -27,8 +27,9 @@ final class DatabaseConnect
         $password = $this->config['database']['password'];
         $this->database = new Nette\Database\Connection($host, $username, $password);
     }
-    public function getAll(){
-        $result = $this->database->query("SELECT product_ean, MIN(price) AS cheapest_price FROM productprices GROUP BY product_ean;");
+    public function getAll($limit=100){
+        $down = $limit - 30;
+        $result = $this->database->query("SELECT product_ean, MIN(price) AS cheapest_price FROM productprices GROUP BY product_ean LIMIT $down, $limit");
         $products = $result->fetchAll();
         $return = [];
         
@@ -40,6 +41,11 @@ final class DatabaseConnect
         }
         
         return $return;
+    }
+
+    public function getProductCount(){
+        $result = $this->database->query("SELECT COUNT(id) as number FROM `products`");
+        return $result->fetch();
     }
 
     public function addProduct($data){
@@ -155,6 +161,13 @@ final class DatabaseConnect
     }
     public function DeleteFollowing($id){
         $this->database->query("DELETE FROM `pricechange` WHERE `pricechange`.`id` = ?",$id);
+
+    }
+    public function AddShop($name){
+        $this->database->query("INSERT INTO `stores` (`id`, `name`) VALUES (NULL, ?)",$name);
+    }
+    public function DeleteShop($name){
+        $this->database->query("DELETE FROM `stores` WHERE `stores`.`name` = ?",$name);
     }
     
 }   

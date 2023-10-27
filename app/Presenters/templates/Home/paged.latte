@@ -33,7 +33,7 @@
           <li n:if="$currentpage != 1" class="page-item"><a class="page-link" href="/page/{$currentpage-1}">Previous</a></li>
          
           {for $i = 1; $i < $pagination['pages']+1; $i++}
-          <li class="page-item"><a class="page-link" href="/page/{$i}">{$i}</a></li>
+          <li class="page-item {if $currentpage == $i} active{/if}"><a class="page-link" href="/page/{$i}">{$i}</a></li>
           {/for}
          
           <li n:if=" $currentpage < $pagination['pages']" class="page-item"><a class="page-link" href="/page/{$currentpage+1}">Next</a></li>

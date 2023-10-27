@@ -1,0 +1,44 @@
+{block content}
+<div class="container">
+    <div class="row">
+    <div class="col-6">
+
+   
+		<h2>Shops</h2>
+		<ul class="list-group mb-3">
+            {foreach $shops as $shop}
+			<li class="list-group-item d-flex justify-content-between lh-sm">
+			  <div>
+				<h6 class="my-0">{$shop['name']}</h6>
+				
+			  </div>
+              <span class="text-body-secondary"><form n:name=deleteShopForm><input type="text" n:name="shop" value="{$shop['name']}" hidden><input n:name=send class="btn btn-danger rounded-pill px-3"></form></span>
+			</li>
+			
+			  {/foreach}
+		  </ul>
+    </div>
+    <div class="col-6">
+      <form n:name=addShopForm>
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Add store name</h4>
+        </div>
+        <div class="card-body">
+        
+          <ul class="list-unstyled  mb-4">
+            <li>Add store name not including Modal example :  DatartModal but you must add only Datart </li> 
+            <li><input type="text" class="form-control" id="shop" n:name=shop placeholder="Datart" required ></li>
+            
+            
+      
+              
+          </ul>
+          
+       
+          <input n:name=send class="w-100 btn btn-lg btn-primary">
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>

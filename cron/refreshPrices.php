@@ -28,7 +28,7 @@ foreach ($loader->get_all() as $product){
         $database->insertPrice($ean,$shopname,$product['price']);
     }
 }
-echo('prices were updated /n');
+echo('prices were updated. ');
 $priceFollow = new PriceFollowLoader();
 
 $mailer = new Mailer();

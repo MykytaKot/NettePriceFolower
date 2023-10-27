@@ -5,6 +5,8 @@ use Nette;
 use App\Models\DatabaseConnect;
 
 
+
+
 final class ShopLoader
 {
     private $AllProducts;
@@ -24,11 +26,15 @@ final class ShopLoader
         foreach ($shops as $shop) {
             $shop = $shop['name'];
             $shopModel = 'App\Models\Shops\\'.$shop.'Model';
+            try{
             $shopModel = new $shopModel();
             $shoptemp = $shopModel->getAll();
             foreach ($shoptemp as $product) {
                 $product['shop'] = $shop;
                 $shopsData[] = $product;
+            }
+            }catch(Exception $e) {
+                echo "Error loading shop ".$shop;
             }
         }
         return $shopsData;

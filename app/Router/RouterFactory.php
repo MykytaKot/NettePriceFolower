@@ -16,7 +16,10 @@ final class RouterFactory
 	{
 		$router = new RouteList;
 		$router->addRoute('<presenter>/<action>[/<id>]', 'Home:default');
+		$router->addRoute('page/<page>', 'Home:paged');
 		$router->addRoute('product/<id>', 'Product:default');
+		$router->addRoute('shops/<id>', 'Shop:default');
+		
 		return $router;
 	}
 }

@@ -1,46 +1,57 @@
 Nette Web Project
 =================
+Used Nette 8 
+PHP version 8.1
 
-This is a simple, skeleton application using the [Nette](https://nette.org). This is meant to
-be used as a starting point for your new projects.
+Guide how to add Shop 
 
-[Nette](https://nette.org) is a popular tool for PHP web development.
-It is designed to be the most usable and friendliest as possible. It focuses
-on security and performance and is definitely one of the safest PHP frameworks.
+/app/Models/Shops
 
-If you like Nette, **[please make a donation now](https://nette.org/donate)**. Thank you!
+add php file with name YourShopNameModel.php
+"
+namespace App\Models\Shops;
+
+use App\Models\ShopInterface;
+use Nette;
+
+final class YourShopNameModel implements  ShopInterface" 
+
+and then implement methods from interface ShopInteface
+
+important fucntion is  getAll() that return an php array of products from that store in format 
+[
+	"id" => 1, 
+	"name" => "name", 
+	"description" => "description", 
+	"price" => price in float, 
+	"currency" => "EUR", 
+	"url" => "url to website", 
+	"ean" => "eancode" 
+], 
+[
+	"id" => 2, 
+	"name" => "Sony WH-1000XM4 Headphones", 
+	"description" => "Wireless noise-canceling headphones with exceptional sound quality.", 
+	"price" => 320, 
+	"currency" => "EUR", 
+	"url" => "https://www.sony.com/wh-1000xm4", 
+	"ean" => "2724292819966" 
+], 
+
+Then on a nav panel on website go to shops and add your shop name without Model for YourShopNameModel it would be  YourShopName
 
 
-Requirements
-------------
-
-- Web Project for Nette 3.1 requires PHP 8.0
+cron script to refresh prices and send email if price changes on certain percent is in folder cron/refreshPrices.php
 
 
-Installation
-------------
+Quick explanation of Models files 
 
-The best way to install Web Project is using Composer. If you don't have Composer yet,
-download it following [the instructions](https://doc.nette.org/composer). Then use command:
-
-	composer create-project nette/web-project path/to/install
-	cd path/to/install
-
-
-Make directories `temp/` and `log/` writable.
+DatabaseConnect.php uses login info from local.neon and does all requests to database 
+Mailer.php uses mailserver info from local.neon and sends emails
+PriceFollowLoader.php  using DatabaseConnect.php and Mailer.php adds new followers and checks for price change
+ProductLoader.php using DatabaseConnect.php controls what data will be shown on product pages
+ShopInteface.php standart interface for shops 
+ShopLoader.php using DatabaseConnect.php gets shops and then load all data from shops using shop classes 
 
 
-Web Server Setup
-----------------
-
-The simplest way to get started is to start the built-in PHP server in the root directory of your project:
-
-	php -S localhost:8000 -t www
-
-Then visit `http://localhost:8000` in your browser to see the welcome page.
-
-For Apache or Nginx, setup a virtual host to point to the `www/` directory of the project and you
-should be ready to go.
-
-**It is CRITICAL that whole `app/`, `config/`, `log/` and `temp/` directories are not accessible directly
-via a web browser. See [security warning](https://nette.org/security-warning).**
+        
