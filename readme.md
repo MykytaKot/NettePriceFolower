@@ -25,11 +25,17 @@ final class YourShopNameModel implements ShopInterface
 important function is getAll() that return an php array of products from that store in format
 
 "id" => 1,
+
 "name" => "name",
-"description" => "description"
+
+"description" => "description",
+
 "price" => price in float,
+
 "currency" => "EUR",
+
 "url" => "url to website",
+
 "ean"=>"eancode"
 
 example array
