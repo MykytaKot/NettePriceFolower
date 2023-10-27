@@ -114,6 +114,11 @@ final class DatabaseConnect
         return $result->fetch();
     }
 
+    public function getStoreByPriceAndEan($ean, $price){
+        $result = $this->database->query("SELECT s.name FROM `productprices` AS pp JOIN stores AS s ON pp.store_id = s.id WHERE pp.product_ean = '$ean' AND ABS(pp.price- $price ) < 0.00001 LIMIT 1");
+        return $result->fetch();
+    }
+
     public function updateFollower($email,$change,$ean){
         $updateQuery = "
         UPDATE pricechange
@@ -134,5 +139,23 @@ final class DatabaseConnect
         $result = $this->database->query("SELECT * FROM `users` WHERE `users`.`email` = '$email' ");
         return $result->fetch();
     }
-}
+
+    public function GetMinPrices($ean){
+        $result = $this->database->query("SELECT MIN(price) as min_price , MIN(old_price) as min_old_price FROM `productprices` WHERE product_ean = '$ean' GROUP BY product_ean");
+        return $result->fetch();
+    }
+
+    public function GetSubcribedProducts(){
+        $result = $this->database->query("SELECT DISTINCT `product_ean` FROM `pricechange`;");
+        return $result->fetchAll();
+    }
+    public function GetSubscribersPercent($ean,$percent){
+        $result = $this->database->query("SELECT pc.product_ean, u.email , pc.percentage FROM `pricechange` as pc JOIN users as u on pc.user_id = u.id   WHERE `product_ean` = '$ean' AND percentage <= $percent;");
+        return $result->fetchAll();
+    }
+    public function DeleteFollowing($id){
+        $this->database->query("DELETE FROM `pricechange` WHERE `pricechange`.`id` = ?",$id);
+    }
+    
+}   
 

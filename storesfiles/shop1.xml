@@ -1,0 +1,92 @@
+<products>
+  <product>
+    <id>10</id>
+    <name>Apple iPhone 13</name>
+    <description>Latest iPhone with A15 Bionic chip and Super Retina XDR display.</description>
+    <price>700.00</price>
+    <currency>EUR</currency>
+    <url>https://www.apple.com/iphone-13</url>
+    <ean>190199822834</ean>
+  </product>
+  <product>
+    <id>11</id>
+    <name>Samsung Galaxy S21</name>
+    <description>Flagship Android smartphone with powerful camera capabilities.</description>
+    <price>699.99</price>
+    <currency>EUR</currency>
+    <url>https://www.samsung.com/galaxy-s21</url>
+    <ean>8806090774321</ean>
+  </product>
+  <product>
+    <id>12</id>
+    <name>Sony WH-1000XM4 Headphones</name>
+    <description>Wireless noise-canceling headphones with exceptional sound quality.</description>
+    <price>349.00</price>
+    <currency>EUR</currency>
+    <url>https://www.sony.com/wh-1000xm4</url>
+    <ean>2724292819966</ean>
+  </product>
+  <product>
+    <id>13</id>
+    <name>Logitech MX Master 3S</name>
+    <description>Mouse - wireless, laser, for right-handed people, connection via Bluetooth.</description>
+    <price>129.00</price>
+    <currency>EUR</currency>
+    <url>https://www.logitech.com/en-eu/products/mice/mx-master-3s.html</url>
+    <ean>910006559</ean>
+  </product>
+  <product>
+    <id>14</id>
+    <name>Sony PlayStation 5</name>
+    <description>The latest PlayStation console with 4K gaming and a fast SSD for quick loading.</description>
+    <price>399.99</price>
+    <currency>EUR</currency>
+    <url>https://www.playstation.com/ps5</url>
+    <ean>711719541805</ean>
+  </product>
+  <product>
+    <id>15</id>
+    <name>Sonos One (Gen 2) Smart Speaker</name>
+    <description>Voice-controlled smart speaker with excellent sound quality and multi-room audio support.</description>
+    <price>179.00</price>
+    <currency>EUR</currency>
+    <url>https://www.sonos.com/one-gen2</url>
+    <ean>878269007891</ean>
+  </product>
+  <product>
+    <id>16</id>
+    <name>Canon EOS R5</name>
+    <description>High-resolution mirrorless camera with 45MP sensor, 8K video, and advanced autofocus.</description>
+    <price>3299.00</price>
+    <currency>EUR</currency>
+    <url>https://www.canon.com/eos-r5</url>
+    <ean>013803347568</ean>
+  </product>
+  <product>
+    <id>17</id>
+    <name>LG Gram 17 Laptop</name>
+    <description>Ultra-light and portable 17-inch laptop with long battery life and a high-resolution display.</description>
+    <price>1399.00</price>
+    <currency>EUR</currency>
+    <url>https://www.lg.com/gram-17</url>
+    <ean>719192635463</ean>
+  </product>
+  <product>
+    <id>18</id>
+    <name>Samsung 65-Inch QLED 4K TV</name>
+    <description>Large QLED TV with 65-inch display, 4K resolution, and Quantum Dot technology.</description>
+    <price>1299.00</price>
+    <currency>EUR</currency>
+    <url>https://www.samsung.com/65-inch-qled-tv</url>
+    <ean>8801643827501</ean>
+  </product>
+  <product>
+    <id>19</id>
+    <name>Google Pixel 6</name>
+    <description>Google's flagship smartphone with a focus on photography and fast software updates.</description>
+    <price>599.00</price>
+    <currency>EUR</currency>
+    <url>https://www.google.com/pixel-6</url>
+    <ean>842776101023</ean>
+  </product>
+</products>

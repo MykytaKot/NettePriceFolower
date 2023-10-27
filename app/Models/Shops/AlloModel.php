@@ -14,7 +14,7 @@ final class AlloModel implements  ShopInterface
 	}
 
     public function LoadProducts(){
-        $this->producData = json_decode(file_get_contents("https://raw.githubusercontent.com/MykytaKot/Price-folower-jsons/main/shop2.json"),true)['products'];
+        $this->producData = json_decode(file_get_contents(__DIR__ ."\..\..\..\storesfiles\shop2.json"),true)['products'];
         
     }
 

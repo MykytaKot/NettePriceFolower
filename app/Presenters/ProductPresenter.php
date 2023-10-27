@@ -22,7 +22,7 @@ final class ProductPresenter extends Nette\Application\UI\Presenter
     protected function createComponentRegistrationForm(): Form
 	{
 		$form = new Form;
-		$form->addText('email', 'Name:');
+		$form->addEmail('email', 'Name:');
         $form->addText('ean', 'product');
 		$form->addText('change', 'Password:');
 		$form->addSubmit('send', 'Follow');

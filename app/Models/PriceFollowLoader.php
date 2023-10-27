@@ -4,14 +4,17 @@ namespace App\Models;
 use Nette;
 
 use App\Models\DatabaseConnect;
+use App\Models\Mailer;
 
 final class PriceFollowLoader
 {
     private $database;
-    
+    private $mailer;
     public function __construct()
     {
+        
         $this->database = new DatabaseConnect();
+        $this->mailer = new Mailer();
     }
 
 
@@ -37,7 +40,26 @@ final class PriceFollowLoader
                 $this->database->addUser($email);
                 $this->database->addFollower($email,$change,$ean);
             }
+            $item = $this->database->getProduct($ean);
+            $html = $this->mailer->HtmlBodyStandart($item['name'], $message);
+            $this->mailer->Send([
+                'to' => $email,'subject'=>'Price Follow' , 'body'=>$html]);
             return $message;
+    }
+
+
+    public function CheckPriceChangeForProduct($ean){
+        $priceChange = $this->database->GetMinPrices($ean);
+        $current  = $priceChange['min_price'];
+        $old = $priceChange['min_old_price'];
+        if($old <= $current){
+            $return = ['price' => $current , 'change' =>0];
+            return $return;
+        }
+        $percentageChange = round((($old - $current ) / $old) * 100);
+        $return = ['price' => $current , 'change' =>$percentageChange];
+        return $return;
+
     }
 
 }

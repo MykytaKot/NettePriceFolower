@@ -1,0 +1,364 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Apple iPhone 13",
+      "description": "Latest iPhone with A15 Bionic chip and Super Retina XDR display.",
+      "price": 500,
+      "currency": "EUR",
+      "url": "https://www.apple.com/iphone-13",
+      "ean": "190199822834"
+    },
+    {
+      "id": 2,
+      "name": "Sony WH-1000XM4 Headphones",
+      "description": "Wireless noise-canceling headphones with exceptional sound quality.",
+      "price": 320.00,
+      "currency": "EUR",
+      "url": "https://www.sony.com/wh-1000xm4",
+      "ean": "2724292819966"
+    },
+    {
+      "id": 3,
+      "name": "Samsung Galaxy S21",
+      "description": "Flagship Android smartphone with powerful camera capabilities.",
+      "price": 499.99,
+      "currency": "EUR",
+      "url": "https://www.samsung.com/galaxy-s21",
+      "ean": "8806090774321"
+    },
+    {
+      "id": 4,
+      "name": "Dell XPS 15 Laptop",
+      "description": "Powerful laptop with a 15.6-inch 4K OLED display and Intel Core i7 processor.",
+      "price": 1499.00,
+      "currency": "EUR",
+      "url": "https://www.dell.com/xps-15",
+      "ean": "884116376425"
+    },
+    {
+      "id": 5,
+      "name": "LG OLED 4K TV",
+      "description": "55-inch OLED TV with stunning 4K resolution and Dolby Vision support.",
+      "price": 999.00,
+      "currency": "EUR",
+      "url": "https://www.lg.com/oled-4k-tv",
+      "ean": "719192628781"
+    },
+    {
+      "id": 6,
+      "name": "Canon EOS 5D Mark IV",
+      "description": "Professional DSLR camera with a 30.4MP sensor and 4K video recording.",
+      "price": 2699.00,
+      "currency": "EUR",
+      "url": "https://www.canon.com/eos-5d-mark-iv",
+      "ean": "013803284344"
+    },
+    {
+      "id": 7,
+      "name": "Bose SoundLink Revolve+",
+      "description": "Portable Bluetooth speaker with 360-degree sound and long battery life.",
+      "price": 249.00,
+      "currency": "EUR",
+      "url": "https://www.bose.com/soundlink-revolve-plus",
+      "ean": "017817726016"
+    },
+    {
+      "id": 8,
+      "name": "MacBook Air M1",
+      "description": "Apple's thin and light laptop with the M1 chip for fast performance and long battery life.",
+      "price": 1099.00,
+      "currency": "EUR",
+      "url": "https://www.apple.com/macbook-air-m1",
+      "ean": "194252026507"
+    },
+    {
+      "id": 9,
+      "name": "Nintendo Switch",
+      "description": "Gaming console for playing popular Nintendo games in handheld or TV mode.",
+      "price": 299.99,
+      "currency": "EUR",
+      "url": "https://www.nintendo.com/nintendo-switch",
+      "ean": "045496452292"
+    },
+    {
+      "id": 10,
+      "name": "Dyson V11 Absolute",
+      "description": "Cordless vacuum cleaner with powerful suction and up to 60 minutes of run time.",
+      "price": 599.00,
+      "currency": "EUR",
+      "url": "https://www.dyson.com/v11-absolute",
+      "ean": "5025155033336"
+    },
+    {
+      "id": 11,
+      "name": "Sony A7 III",
+      "description": "Mirrorless camera with 24.2MP full-frame sensor and 4K video capabilities.",
+      "price": 1999.00,
+      "currency": "EUR",
+      "url": "https://www.sony.com/a7-iii",
+      "ean": "027242911163"
+    },
+    {
+      "id": 12,
+      "name": "Apple Watch Series 7",
+      "description": "Latest Apple Watch with a larger display and advanced health features.",
+      "price": 349.00,
+      "currency": "EUR",
+      "url": "https://www.apple.com/apple-watch-series-7",
+      "ean": "190199839174"
+    },
+    {
+      "id": 13,
+      "name": "Microsoft Surface Pro 7",
+      "description": "Versatile 2-in-1 laptop with a touchscreen and powerful Intel Core processor.",
+      "price": 799.00,
+      "currency": "EUR",
+      "url": "https://www.microsoft.com/surface-pro-7",
+      "ean": "889842610407"
+    },
+    {
+      "id": 14,
+      "name": "GoPro Hero 10 Black",
+      "description": "Action camera with 5.3K video recording and advanced stabilization technology.",
+      "price": 499.00,
+      "currency": "EUR",
+      "url": "https://www.gopro.com/hero-10-black",
+      "ean": "818279026075"
+    },
+    {
+      "id": 15,
+      "name": "Bose QuietComfort 45 Headphones",
+      "description": "Wireless noise-canceling headphones with exceptional comfort and sound quality.",
+      "price": 349.00,
+      "currency": "EUR",
+      "url": "https://www.bose.com/quietcomfort-45",
+      "ean": "017817876276"
+    },
+    {
+      "id": 16,
+      "name": "Xbox Series X",
+      "description": "Next-gen gaming console from Microsoft with 4K gaming and fast load times.",
+      "price": 499.99,
+      "currency": "EUR",
+      "url": "https://www.xbox.com/series-x",
+      "ean": "889842680460"
+    },
+    {
+      "id": 17,
+      "name": "LG 34GN850-B Monitor",
+      "description": "UltraWide gaming monitor with a 34-inch QHD display and high refresh rate.",
+      "price": 799.00,
+      "currency": "EUR",
+      "url": "https://www.lg.com/34gn850-b",
+      "ean": "719192637228"
+    },
+    {
+      "id": 18,
+      "name": "Nikon D850 DSLR",
+      "description": "High-resolution DSLR camera with a 45.7MP sensor and 4K video recording.",
+      "price": 2999.00,
+      "currency": "EUR",
+      "url": "https://www.nikon.com/d850",
+      "ean": "018208939858"
+    },
+    {
+      "id": 19,
+      "name": "Sony PlayStation 5",
+      "description": "The latest PlayStation console with 4K gaming and a fast SSD for quick loading.",
+      "price": 499.99,
+      "currency": "EUR",
+      "url": "https://www.playstation.com/ps5",
+      "ean": "711719541805"
+    },
+    {
+      "id": 20,
+      "name": "Sonos One (Gen 2) Smart Speaker",
+      "description": "Voice-controlled smart speaker with excellent sound quality and multi-room audio support.",
+      "price": 199.00,
+      "currency": "EUR",
+      "url": "https://www.sonos.com/one-gen2",
+      "ean": "878269007891"
+    },
+    {
+      "id": 21,
+      "name": "Canon EOS R5",
+      "description": "High-resolution mirrorless camera with 45MP sensor, 8K video, and advanced autofocus.",
+      "price": 3499.00,
+      "currency": "EUR",
+      "url": "https://www.canon.com/eos-r5",
+      "ean": "013803347568"
+    },
+    {
+      "id": 22,
+      "name": "LG Gram 17 Laptop",
+      "description": "Ultra-light and portable 17-inch laptop with long battery life and a high-resolution display.",
+      "price": 1499.00,
+      "currency": "EUR",
+      "url": "https://www.lg.com/gram-17",
+      "ean": "719192635463"
+    },
+    {
+      "id": 23,
+      "name": "Samsung 65-Inch QLED 4K TV",
+      "description": "Large QLED TV with 65-inch display, 4K resolution, and Quantum Dot technology.",
+      "price": 1499.00,
+      "currency": "EUR",
+      "url": "https://www.samsung.com/65-inch-qled-tv",
+      "ean": "8801643827501"
+    },
+    {
+      "id": 24,
+      "name": "Google Pixel 6",
+      "description": "Google's flagship smartphone with a focus on photography and fast software updates.",
+      "price": 699.00,
+      "currency": "EUR",
+      "url": "https://www.google.com/pixel-6",
+      "ean": "842776101023"
+    },
+    {
+      "id": 25,
+      "name": "Bowers & Wilkins PX7 Headphones",
+      "description": "Over-ear wireless headphones with adaptive noise cancellation and premium sound.",
+      "price": 399.00,
+      "currency": "EUR",
+      "url": "https://www.bowerswilkins.com/px7",
+      "ean": "714346324362"
+    },
+    {
+      "id": 26,
+      "name": "Microsoft Xbox Series S",
+      "description": "Compact and affordable next-gen gaming console with 1440p gaming and fast load times.",
+      "price": 299.99,
+      "currency": "EUR",
+      "url": "https://www.xbox.com/series-s",
+      "ean": "889842623111"
+    },
+    {
+      "id": 27,
+      "name": "Garmin Fenix 7 Smartwatch",
+      "description": "Rugged smartwatch with GPS, heart rate monitoring, and advanced fitness features.",
+      "price": 699.00,
+      "currency": "EUR",
+      "url": "https://www.garmin.com/fenix-7",
+      "ean": "753759271140"
+    },
+    {
+      "id": 28,
+      "name": "Panasonic Lumix GH5 Camera",
+      "description": "Mirrorless camera with 20.3MP sensor, 4K video recording, and advanced video features.",
+      "price": 1699.00,
+      "currency": "EUR",
+      "url": "https://www.panasonic.com/lumix-gh5",
+      "ean": "885170302829"
+    },
+    {
+      "id": 29,
+      "name": "Dyson Air Purifier",
+      "description": "Air purifier with HEPA and activated carbon filters for clean and fresh air.",
+      "price": 399.00,
+      "currency": "EUR",
+      "url": "https://www.dyson.com/air-purifier",
+      "ean": "5025155034234"
+    },
+    {
+      "id": 30,
+      "name": "Apple iPad Pro 12.9-inch",
+      "description": "Large iPad with a Liquid Retina XDR display, M1 chip, and support for the Apple Pencil.",
+      "price": 1099.00,
+      "currency": "EUR",
+      "url": "https://www.apple.com/ipad-pro-12-9",
+      "ean": "190199834294"
+    },
+    {
+      "id": 31,
+      "name": "Samsung Odyssey G9 Monitor",
+      "description": "Curved gaming monitor with a 49-inch dual QHD display and fast refresh rate.",
+      "price": 1299.00,
+      "currency": "EUR",
+      "url": "https://www.samsung.com/odyssey-g9",
+      "ean": "887276409828"
+    },
+    {
+      "id": 32,
+      "name": "Amazon Echo Show 15",
+      "description": "Large smart display with Alexa, designed for visual and voice interactions.",
+      "price": 249.00,
+      "currency": "EUR",
+      "url": "https://www.amazon.com/echo-show-15",
+      "ean": "841667200542"
+    },
+    {
+      "id": 33,
+      "name": "OnePlus 9 Pro",
+      "description": "Flagship smartphone with a Hasselblad camera, fast charging, and 120Hz display.",
+      "price": 799.00,
+      "currency": "EUR",
+      "url": "https://www.oneplus.com/9-pro",
+      "ean": "692181561949"
+    },
+    {
+      "id": 34,
+      "name": "Razer Blade 15 Laptop",
+      "description": "Gaming laptop with a high-refresh-rate display and powerful NVIDIA graphics.",
+      "price": 1799.00,
+      "currency": "EUR",
+      "url": "https://www.razer.com/blade-15",
+      "ean": "814855028250"
+    },
+    {
+      "id": 35,
+      "name": "Fitbit Charge 5",
+      "description": "Fitness tracker with built-in GPS, heart rate monitoring, and AMOLED display.",
+      "price": 149.00,
+      "currency": "EUR",
+      "url": "https://www.fitbit.com/charge-5",
+      "ean": "811138037421"
+    },
+    {
+      "id": 36,
+      "name": "LG C1 OLED TV",
+      "description": "Premium OLED TV with Dolby Vision IQ, NVIDIA G-SYNC, and AI picture technology.",
+      "price": 1999.00,
+      "currency": "EUR",
+      "url": "https://www.lg.com/c1-oled-tv",
+      "ean": "719192639487"
+    },
+    {
+      "id": 37,
+      "name": "Canon EOS 90D",
+      "description": "High-performance DSLR camera with 32.5MP sensor and 4K video recording.",
+      "price": 1199.00,
+      "currency": "EUR",
+      "url": "https://www.canon.com/eos-90d",
+      "ean": "013803320657"
+    },
+    {
+      "id": 38,
+      "name": "Apple AirPods Pro",
+      "description": "Wireless earbuds with active noise cancellation and a customizable fit.",
+      "price": 249.00,
+      "currency": "EUR",
+      "url": "https://www.apple.com/airpods-pro",
+      "ean": "190199246850"
+    },
+    {
+      "id": 39,
+      "name": "Sony Bravia A80J OLED TV",
+      "description": "Master Series OLED TV with XR OLED Contrast Pro and Acoustic Surface Audio+.",
+      "price": 2499.00,
+      "currency": "EUR",
+      "url": "https://www.sony.com/bravia-a80j",
+      "ean": "027242924759"
+    },
+    {
+      "id": 40,
+      "name": "Xiaomi Mi 11",
+      "description": "Flagship smartphone with Snapdragon 888, 108MP camera, and 120Hz AMOLED display.",
+      "price": 699.00,
+      "currency": "EUR",
+      "url": "https://www.xiaomi.com/mi-11",
+      "ean": "693417771033"
+    }
+  ]
+}

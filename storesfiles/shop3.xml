@@ -1,0 +1,195 @@
+<products>
+  
+
+  
+  <product>
+    <id>22</id>
+    <name>Nintendo Switch</name>
+    <description>Gaming console for playing popular Nintendo games in handheld or TV mode.</description>
+    <price>299.99</price>
+    <currency>EUR</currency>
+    <url>https://www.nintendo.com/nintendo-switch</url>
+    <ean>045496452292</ean>
+  </product>
+
+  <product>
+    <id>23</id>
+    <name>Dyson V11 Absolute</name>
+    <description>Cordless vacuum cleaner with powerful suction and up to 60 minutes of run time.</description>
+    <price>599.00</price>
+    <currency>EUR</currency>
+    <url>https://www.dyson.com/v11-absolute</url>
+    <ean>5025155033336</ean>
+  </product>
+
+  <product>
+    <id>24</id>
+    <name>Sony A7 III</name>
+    <description>Mirrorless camera with 24.2MP full-frame sensor and 4K video capabilities.</description>
+    <price>1999.00</price>
+    <currency>EUR</currency>
+    <url>https://www.sony.com/a7-iii</url>
+    <ean>027242911163</ean>
+  </product>
+
+  <product>
+    <id>25</id>
+    <name>Apple Watch Series 7</name>
+    <description>Latest Apple Watch with a larger display and advanced health features.</description>
+    <price>349.00</price>
+    <currency>EUR</currency>
+    <url>https://www.apple.com/apple-watch-series-7</url>
+    <ean>190199839174</ean>
+  </product>
+
+  <product>
+    <id>26</id>
+    <name>Microsoft Surface Pro 7</name>
+    <description>Versatile 2-in-1 laptop with a touchscreen and powerful Intel Core processor.</description>
+    <price>799.00</price>
+    <currency>EUR</currency>
+    <url>https://www.microsoft.com/surface-pro-7</url>
+    <ean>889842610407</ean>
+  </product>
+
+  <product>
+    <id>27</id>
+    <name>GoPro Hero 10 Black</name>
+    <description>Action camera with 5.3K video recording and advanced stabilization technology.</description>
+    <price>499.00</price>
+    <currency>EUR</currency>
+    <url>https://www.gopro.com/hero-10-black</url>
+    <ean>818279026075</ean>
+  </product>
+
+  <product>
+    <id>28</id>
+    <name>Bose QuietComfort 45 Headphones</name>
+    <description>Wireless noise-canceling headphones with exceptional comfort and sound quality.</description>
+    <price>349.00</price>
+    <currency>EUR</currency>
+    <url>https://www.bose.com/quietcomfort-45</url>
+    <ean>017817876276</ean>
+  </product>
+
+  <product>
+    <id>29</id>
+    <name>Xbox Series X</name>
+    <description>Next-gen gaming console from Microsoft with 4K gaming and fast load times.</description>
+    <price>499.99</price>
+    <currency>EUR</currency>
+    <url>https://www.xbox.com/series-x</url>
+    <ean>889842680460</ean>
+  </product>
+  
+  <!-- New Products -->
+  <product>
+    <id>30</id>
+    <name>LG 34GN850-B Monitor</name>
+    <description>UltraWide gaming monitor with a 34-inch QHD display and high refresh rate.</description>
+    <price>799.00</price>
+    <currency>EUR</currency>
+    <url>https://www.lg.com/34gn850-b</url>
+    <ean>719192637228</ean>
+  </product>
+
+  <product>
+    <id>31</id>
+    <name>Nikon D850 DSLR</name>
+    <description>High-resolution DSLR camera with a 45.7MP sensor and 4K video recording.</description>
+    <price>2999.00</price>
+    <currency>EUR</currency>
+    <url>https://www.nikon.com/d850</url>
+    <ean>018208939858</ean>
+  </product>
+
+  <product>
+    <id>32</id>
+    <name>Sony PlayStation 5</name>
+    <description>The latest PlayStation console with 4K gaming and a fast SSD for quick loading.</description>
+    <price>399.99</price>
+    <currency>EUR</currency>
+    <url>https://www.playstation.com/ps5</url>
+    <ean>711719541805</ean>
+  </product>
+
+  <product>
+    <id>33</id>
+    <name>Sonos One (Gen 2) Smart Speaker</name>
+    <description>Voice-controlled smart speaker with excellent sound quality and multi-room audio support.</description>
+    <price>179.00</price>
+    <currency>EUR</currency>
+    <url>https://www.sonos.com/one-gen2</url>
+    <ean>878269007891</ean>
+  </product>
+
+  <product>
+    <id>34</id>
+    <name>Canon EOS R5</name>
+    <description>High-resolution mirrorless camera with 45MP sensor, 8K video, and advanced autofocus.</description>
+    <price>3299.00</price>
+    <currency>EUR</currency>
+    <url>https://www.canon.com/eos-r5</url>
+    <ean>013803347568</ean>
+  </product>
+
+  <product>
+    <id>35</id>
+    <name>LG Gram 17 Laptop</name>
+    <description>Ultra-light and portable 17-inch laptop with long battery life and a high-resolution display.</description>
+    <price>1399.00</price>
+    <currency>EUR</currency>
+    <url>https://www.lg.com/gram-17</url>
+    <ean>719192635463</ean>
+  </product>
+
+  <product>
+    <id>36</id>
+    <name>Samsung 65-Inch QLED 4K TV</name>
+    <description>Large QLED TV with 65-inch display, 4K resolution, and Quantum Dot technology.</description>
+    <price>1299.00</price>
+    <currency>EUR</currency>
+    <url>https://www.samsung.com/65-inch-qled-tv</url>
+    <ean>8801643827501</ean>
+  </product>
+
+  <product>
+    <id>37</id>
+    <name>Google Pixel 6</name>
+    <description>Google's flagship smartphone with a focus on photography and fast software updates.</description>
+    <price>599.00</price>
+    <currency>EUR</currency>
+    <url>https://www.google.com/pixel-6</url>
+    <ean>842776101023</ean>
+  </product>
+
+  <product>
+    <id>38</id>
+    <name>Bose SoundLink Revolve+</name>
+    <description>Portable Bluetooth speaker with 360-degree sound and long battery life.</description>
+    <price>249.00</price>
+    <currency>EUR</currency>
+    <url>https://www.bose.com/soundlink-revolve-plus</url>
+    <ean>017817726016</ean>
+  </product>
+
+  <product>
+    <id>39</id>
+    <name>MacBook Air M1</name>
+    <description>Apple's thin and light laptop with the M1 chip for fast performance and long battery life.</description>
+    <price>999.00</price>
+    <currency>EUR</currency>
+    <url>https://www.apple.com/macbook-air-m1</url>
+    <ean>194252026507</ean>
+  </product>
+
+  <product>
+    <id>40</id>
+    <name>Nintendo Switch</name>
+    <description>Gaming console for playing popular Nintendo games in handheld or TV mode.</description>
+    <price>299.99</price>
+    <currency>EUR</currency>
+    <url>https://www.nintendo.com/nintendo-switch</url>
+    <ean>045496452292</ean>
+  </product>
+</products>

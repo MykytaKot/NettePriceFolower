@@ -14,7 +14,7 @@ final class RozetkaModel implements  ShopInterface
 	}
 
     public function LoadProducts(){
-        $xmlstring = file_get_contents("https://raw.githubusercontent.com/MykytaKot/Price-folower-jsons/main/shop3.xml");
+        $xmlstring = file_get_contents(__DIR__ ."\..\..\..\storesfiles\shop3.xml");
         $xml = simplexml_load_string($xmlstring, "SimpleXMLElement", LIBXML_NOCDATA);
         $json = json_encode($xml);
         $this->producData = json_decode($json,true)['product'];
