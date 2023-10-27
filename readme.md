@@ -4,6 +4,8 @@ Used Nette 8
 
 PHP version 8.1
 
+MySQL version 8
+
 
 Guide how to add Shop
 
